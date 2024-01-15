@@ -1,15 +1,15 @@
 "use strict";
+const body = document.querySelector(".main-body")
 
-const body = document.querySelector(".main-body");
 
 const res = fetch("https://dummyjson.com/products/")
   .then((datas) => datas.json())
   .then((data) => {
-    // console.log(data);
+    
 
-    // creating for each data in the array
-    const items = data.products.map((mData) => {
-      //This is the main container.. all items will be inserted inside here
+    const items = data.products.filter((mData)=>{
+      if(mData.stock<=50){
+           //This is the main container.. all items will be inserted inside here
 
       const parentContainer = document.createElement("div");
       parentContainer.classList.add("parent-container");
@@ -97,5 +97,17 @@ const res = fetch("https://dummyjson.com/products/")
           
         }
       });
-    });
+      }
+      
+      
+
+      
+
+    })
+   
+
+    
+
+
+
   });

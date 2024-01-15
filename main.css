@@ -1,4 +1,4 @@
-@media (max-width:480px) {
+
     .main-body {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -18,9 +18,8 @@
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 .parent-container {
-    font-size: 14px;
   height: 350px;
-  width: 215px;
+  width: 250px;
   display: flex;
   flex-direction: column;
 
@@ -121,4 +120,3 @@
   display: none;
 }
 
-}
