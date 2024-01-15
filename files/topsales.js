@@ -1,5 +1,15 @@
 "use strict";
 const body = document.querySelector(".main-body")
+ const alertArea = document.querySelector(".alertArea");
+
+ const alertBox = document.createElement("div")
+ alertBox.innerHTML=`<p>Items with most sold are shown.</p>`
+ alertArea.appendChild(alertBox)
+ 
+
+ setTimeout(() => {
+  alertBox.remove()
+ }, 5000);
 
 
 const res = fetch("https://dummyjson.com/products/")
@@ -14,6 +24,9 @@ const res = fetch("https://dummyjson.com/products/")
       const parentContainer = document.createElement("div");
       parentContainer.classList.add("parent-container");
       body.appendChild(parentContainer);
+
+
+    
 
     
 
