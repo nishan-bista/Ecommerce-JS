@@ -15,16 +15,14 @@ const res = fetch("https://dummyjson.com/products/")
       parentContainer.classList.add("parent-container");
       body.appendChild(parentContainer);
 
-    
-
       const imageContainer = document.createElement("div");
       imageContainer.classList.add("image-container");
       imageContainer.style.backgroundImage = `url(${mData.thumbnail})`;
       parentContainer.appendChild(imageContainer);
 
-        const title = document.createElement("div");
-        title.innerHTML=`<h3>${mData.title}</h3>`
-        parentContainer.appendChild(title)
+      const title = document.createElement("div");
+      title.innerHTML = `<h3>${mData.title}</h3>`;
+      parentContainer.appendChild(title);
 
       const description = document.createElement("div");
       description.classList.add("description");
@@ -55,11 +53,10 @@ const res = fetch("https://dummyjson.com/products/")
       const discount = document.createElement("div");
       discount.innerHTML = `<p>${mData.discountPercentage} %Off</p>`;
       discount.style.color = "red";
-      discount.style.fontWeight="bold"
+      discount.style.fontWeight = "bold";
       priceAndOthers.appendChild(discount);
       if (mData.discountPercentage <= 10) {
         discount.style.color = "green";
-        
       }
 
       const ratings = document.createElement("div");
@@ -73,7 +70,6 @@ const res = fetch("https://dummyjson.com/products/")
 
       if (mData.stock <= 20) {
         stock.style.color = "red";
-        
       } else if (mData.stock >= 20) {
         stock.style.color = "green";
       }
@@ -86,16 +82,22 @@ const res = fetch("https://dummyjson.com/products/")
           buttonForShowMore.textContent = "Show More....";
           buttonForShowMore.style.marginTop = "0px";
         } else {
-            if(description.textContent.length <= 80){
-                buttonForShowMore.textContent = "Show Less";
-          buttonForShowMore.style.marginTop = "35px";
-            }
-            else{
-                buttonForShowMore.textContent = "Show Less";
-          buttonForShowMore.style.marginTop = "55px";
-            }
-          
+          if (description.textContent.length <= 80) {
+            buttonForShowMore.textContent = "Show Less";
+            buttonForShowMore.style.marginTop = "35px";
+          } else {
+            buttonForShowMore.textContent = "Show Less";
+            buttonForShowMore.style.marginTop = "55px";
+          }
         }
       });
     });
   });
+
+//dark mode
+const darkbutton = document.querySelector(".darkbutton");
+
+darkbutton.addEventListener("click", (e) => {
+  body.parentElement.classList.toggle("active");
+  body.lastElementChild.lastElementChild.classList.toggle("borderwhite");
+});

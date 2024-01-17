@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
 header {
   height: 100px;
   width: 100%;
@@ -68,6 +73,7 @@ header {
 .panel-two-container {
   height: 55px;
   display: flex;
+  
   justify-content: center;
   align-items: center;
 }
@@ -98,6 +104,14 @@ header {
 
   height: 65%;
   width: 10%;
+}
+#darkButton{
+  margin-left: 120px;
+  height: 20px;
+  width: 100px;
+}
+.darkActive{
+  background-color: #000000;
 }
 
 @media (max-width:480px) {
@@ -211,3 +225,4 @@ header {
   }
   
 }
+
