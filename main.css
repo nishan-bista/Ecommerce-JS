@@ -66,47 +66,9 @@
 
   color: white;
 }
-.priceAndOthers:hover {
-  
 
-  animation-name: homepics;
-  animation-duration: 1s;
-}
-@keyframes homepics {
-  0% {
-    border: 2px solid #030637;
-  }
 
-  10% {
-    border: 4px dotted #ff004d;
-  }
-  20% {
-    border: 4px double black;
-  }
-  30% {
-    border: 6px double green;
-  }
-  40% {
-    border-style: dotted;
-    border: 4px dashed gold;
-  }
-  50% {
-    border: 2px double red;
-    
-  }
-  80% {
-    border: 6px double skyblue;
-    
-  }
-  90% {
-    border: 3px double black;
-    
-  }
-  100% {
-    border: 2px double gold;
-   
-  }
-}
+
 .priceAndOthers {
   border: 3px dotted black;
   height: unset;
