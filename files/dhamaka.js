@@ -91,11 +91,10 @@ const res = fetch("https://dummyjson.com/products/")
       }
     });
   });
-  //dark mode
+//dark mode
 const darkbutton = document.querySelector(".darkbutton");
 
 darkbutton.addEventListener("click", (e) => {
   body.parentElement.classList.toggle("active");
   body.lastElementChild.lastElementChild.classList.toggle("borderwhite");
 });
-

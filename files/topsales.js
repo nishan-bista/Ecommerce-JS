@@ -101,7 +101,7 @@ const res = fetch("https://dummyjson.com/products/")
     });
   });
 
-  const darkbutton = document.querySelector(".darkbutton");
+const darkbutton = document.querySelector(".darkbutton");
 
 darkbutton.addEventListener("click", (e) => {
   body.parentElement.classList.toggle("active");
